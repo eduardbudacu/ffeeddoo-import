@@ -1,0 +1,39 @@
+{
+  "name": "ffeeddoo-import",
+  "description": "command line utilities to import products in ffeeddoo",
+  "version": "0.1.0",
+  "author": "Eduard Budacu <eduard.budacu@koding.ro>",
+  "contributors": [],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/eduarbudacu/ffeeddoo-import.git"
+  },
+  "bugs": "http://github.com/eduarbudacu/ffeeddoo-import/issues",
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org"
+  },
+  "engines": {
+    "node": "~0.10.22"
+  },
+  "dependencies": {
+    "async": "^2.0.0-rc.5",
+    "body-parser": "^1.9.0",
+    "express": "^4.0.0",
+    "jsonpath": "^0.2.2",
+    "mongodb": "^2.1.19",
+  },
+  "devDependencies": {
+    "tape": "^3.0.0",
+    "js-yaml": "^3.2.6",
+    "jshint": "^2.4.1",
+    "istanbul": "~0.2.3",
+    "enjoi": "^1.0.2",
+    "supertest": "~0.13.0"
+  },
+  "scripts": {
+    "test": "tape tests/*.js",
+    "cover": "istanbul cover tape -- test/*.js",
+    "lint": "jshint -c .jshintrc --exclude ./node_modules ."
+  },
+  "main": "./server"
+}
