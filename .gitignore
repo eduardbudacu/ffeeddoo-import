@@ -6,6 +6,7 @@
 *.pid
 *.gz
 *.orig
+feed.json
 
 work
 build
