@@ -65,7 +65,7 @@ http.get(options, function(res) {
         body += chunk;
     });
     res.on('end', function() {
-        for (header in res.headers) { //Response Headers
+        for (var header in res.headers) { //Response Headers
             var value = res.headers[header];
             console.log(header + ': ' + value);
         }
@@ -74,7 +74,7 @@ http.get(options, function(res) {
         //console.log("---------------------------------------------------");
         var objects = body.substring(body.indexOf('['),body.lastIndexOf(']')+1); // get only the products from the requests
         //console.log(objects); // verify the response
-        JSONobject = JSON.parse(objects); // convert string to JSON
+        var JSONobject = JSON.parse(objects); // convert string to JSON
 
         var MongoClient = mongodb.MongoClient;
         var url = 'mongodb://localhost:27017/ffeeddoo'; // set database name (FORMAT: mongodb://localhost:27017/DATABASE_NAME )
