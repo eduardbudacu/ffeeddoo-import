@@ -11,7 +11,8 @@ var request = require('request');
 var gmdate = require('phpdate-js').gmdate;
 var mongodb = require('mongodb'); // database
 var config = require('./config.js');
-var req = require('./req.js');
+//var req = require('./req.js');
+var req = require('./lib/b2bClient.js');
 program.parse(process.argv);
 
 var apiEndpoint = 'https://api.b2b-stg.nod.ro/';
